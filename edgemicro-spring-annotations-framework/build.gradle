@@ -1,0 +1,28 @@
+group 'com.google.edge'
+version '0.1.0'
+
+apply plugin: 'java'
+//apply plugin: 'org.springframework.boot'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE")
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    //compile group: 'org.springframework', name: 'spring-beans', version: '3.0.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-beans', version: '4.2.3.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '4.2.3.RELEASE'
+
+}

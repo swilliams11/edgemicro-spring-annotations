@@ -1,0 +1,8 @@
+include 'edgemicro-spring-annotations-framework'
+findProject(':edgemicro-spring-annotations-framework')?.name = 'edgemicro-spring-annotations'
+include 'edgemicro-spring-annotation-test'
+include 'edgemicro-spring-annotations-test'
+
+include ':EdgemicroAnnotations'
+project(':EdgemicroAnnotations').projectDir = new File(settingsDir, '../edgemicro-spring-annotations/edgemicro-spring-annotations-framework')
+
